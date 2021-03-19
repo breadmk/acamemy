@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+<pre>
+   1) $.each(object,function(index,item){})
+   2) $(셀렉터).each(object,function(index,item){})
+</pre>
+<hr>
+
+<script>
+
+// 1)))))))))))))))))
+/*
+주석
+a1=['사과','배','감','대추']
+$.each(a1,function(index,item){
+                alert(index+','+item)       // 1,사과
+                })
+주석
+*/
+
+/*
+주석
+a2=[{name:'사과',price:2000},{name:'배',price:3000},{name:'감',price:1500}]
+$.each(a2,function(index,item){
+   //alert(index+','+item)            //item json 문서
+   str=item.name+","+item.price
+   alert(str)                       // name,사과
+   })
+주석
+*/
+
+/*
+주석
+j1={name:"둘리",addr:"쌍문동",age:"1억살"}
+
+$.each(j1,function(index,item){     //json 전달.
+    alert(index+','+item)       //index = key , item = values   //name,둘리
+})
+주석
+*/
+
+</script>
+
+<hr>
+    <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+        <li>four</li>
+        <li>five</li>
+        <li>six</li>
+        <li>seven</li>
+        <li>eight</li>
+        <li>nine</li>
+    </ul>
+
+<script>
+    //2))))))))))))))))))))
+
+$('li').each(function(index,item){      //객체가 없어서 바로 함수
+    //alert(index+','+item)
+    $(this).addClass('c'+index)        //class="c0" ~c8 자동으로 추가함;
+    //$(item).addClass('d'+index)         // 주석 풀면 둘다 실행됨
+})
+</script>
+<hr>
+<h3>one</h3>
+<h3>two</h3>
+<h3>three</h3>
+<hr>
+<script>
+
+colors=['red','green','blue']
+
+$('h3').each(function(index,item){
+    $(this).css('background',colors[index])
+})
+</script>
+<p>지리산에 <strong>산수유1 축제</strong>가 있다.</p>
+<p>지리산에 <span><strong>산수유2 축제</strong></span>가 있다.</p>
+<div>소백산에 <strong>진달래 축제</strong>가 있다.</div>
+<p>지리산에 <strong>예쁜 산수유 축제</strong>가 있어서 많은 사람들이 방문하고 있다.</p>
+<script>
+    //$('p').find('strong').css('background','yellow')      // p태그 아래의 모든 strong (조상격)
+    $('p').children('strong').css('background','pink')      //p태그 아래의 바로 아래 strong (상속격)
+    //$('p > strong').css('background','yellow')            // 위랑 같음.
+    $('p').each(function(item){
+        //alert($(this).text())
+        if($(this).text().length>20){
+            $(this).find('strong').css('color','red')
+        }
+    })
+
+</script>
+
+
+</body>
+
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+</html>

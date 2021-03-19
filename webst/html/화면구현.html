@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+
+    <style>
+        #username {width:30%;}
+        #ssn1 {width:35%;}
+        td {font-weight:500;}
+    </style>
+</head>
+<body>
+
+<table width="580px" border="1">
+
+<form nama="myform" action="=#">
+    <tr>
+        <th colspan="2">회원가입</th>
+    </tr>
+    <tr>
+        <td>
+           <label for="userid">사용자ID</label>
+            </td>
+            <td>
+               <input type="text" id="userid" name="userid">
+               <input type="button" value="중복확인">
+            </td>
+    </tr>
+    <tr>
+        <td>비밀번호</td>
+        <td> <input type="password" name="pw" id="pw"></td>
+    </tr>
+    <tr>
+        <td>비밀번호 확인</td>
+        <td> <input type="password" name="pw1" id="pw1"></td>
+    </tr>
+    <tr>
+        <td>사용자이름</td>
+        <td><input type="text" name="username" id="username"></td>
+    </tr>
+    <tr>
+        <td>주민등록번호</td>
+        <td><input type="text" name="ssn" id="ssn"> -
+        <input type="text" name="ssn" id="ssn1"></td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td><input type="text" name="email" id="email">@
+            <input type="text" name="email" id="email1"> <!-- type="email" @ 있어서 생략 -->
+            <select name="joso">
+                <option value="ff">직접작성</option>
+                <option value="ff">네이버</option>
+                <option value="ff">다음</option>
+                <option value="ff">구글</option>
+                <option value="ff">네이트</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+            <td>취미</td>
+            <td><input type="checkbox" name="hobby" value="m">등산
+                <input type="checkbox" name="hobby" value="f">낚시
+                <input type="checkbox" name="hobby" value="t">여행
+                 <input type="checkbox" name="hobby" value="red">독서
+                <input type="checkbox" name="hobby" value="etc">기타
+            </td>
+    </tr>
+    <tr>
+        <td>주소</td>
+        <td><input type="text" name="loc" id="loc"></td>
+    </tr>
+    <tr>
+        <td>직업</td>
+        <td>
+            <select name="job" id="job">
+            <option value="gg">직접입력</option>
+            <option value="gg">null</option>
+            <option value="gg">null</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>자기소개</td>
+        <td>
+                <textarea name="info" cols="50" rows="5">간략히 작성하세요
+                </textarea>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2" align="center">
+            <input type="submit" value="회원가입">
+            <input type="reset" value="다시입력">
+        </td>
+    </tr>
+
+
+</form>
+</table>
+</body>
+</html>

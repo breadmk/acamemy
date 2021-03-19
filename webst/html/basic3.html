@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>div/span</title>
+    <style>
+        * {margin:0;}       /* 모든 태그의 밖 여백을 삭제 */
+        .a1 {background:#FFD9EC; width:200px; height:150px;}
+        .a2 {background:#00D8FF; width:200px; height:150px;}
+        .a3 {background:#FFD9EC; width:200px; height:150px;}
+        .a4 {background:#00D8FF; width:200px; height:150px;}
+
+        /* 인라인형식도 display 속성을 이용해서 블록형식으로 변경 가능 */
+        /* 블록형식도 display 속성을 이용해서 인라인형식으로 변경 가능 */
+
+        span {display:block;}
+        div {display:inline;}
+        span::after{
+        content:'####';
+        }
+        div::before{
+        content:'$$$$';
+        }
+</style>
+</head>
+<body>
+
+<span class="a1" >스팬1</span>
+<span class="a2">스팬2</span>
+<div class="a3">div1</div>
+<div class="a4">div2</div>
+/* 인라인형식도 display 속성을 이용해서 블록형식으로 변경 가능 */
+ /* 블록형식도 display 속성을 이용해서 인라인형식으로 변경 가능 */</br>
+<br>
+
+</body>
+</html>

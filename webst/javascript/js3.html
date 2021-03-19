@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>대화상자</title>
+</head>
+<body>
+<pre>
+alert(메세지) | 일방적 제공
+prompt(메세지,[기본값]) | 입력값 전달.
+confirm(메세지) | 확인,취소 선택
+
+--------변수명----------------
+
+변수명:영문,숫자,_,$ 사용가능.
+      첫 글자 숫자X,대소문자 구분,예약어 사용X,한글도 가능하지만 영어를 사용하자.
+var 변수;
+var 변수1,변수2,변수3;
+var a,b=1,c;
+
+-------데이터타입-------------
+
+
+Number (정수,실수)
+String (문자열)
+Boolean (true,false)
+Object (객체저장)
+null(값없음)
+undefined(초기화 되지 않음)
+동적타입: 실행중 데이터타입이 자유롭게 변경경
+
+</pre>
+
+<script>
+//kor=91
+//kor=prompt("국어점수는=");
+kor=prompt("국어점수는",99);
+alert("국어점수는 " +kor+"입니다"); //내가 확인버튼밖에 누를 수 없는것 alert
+result=confirm("점수를 \n정확히\n입력했습니까?");
+console.log(result);  //확인 = true | 취소 = false
+if (result) {
+    document.write("정확히 입력하셨군요");
+}else{
+    document.write("다음에 정확히 입력하세요");
+};
+document.write("줄이 너무 길어서 한줄에 표현하기가 어려울 때는 \
+ 를 행끝에 붙이고 다음줄로 내려 쓰세요");
+document.write("<hr>");
+a=502;
+document.write("a="+a+"<br>");
+a="개발자";
+document.write("a="+a+"<br>");
+b=true;
+document.write("b="+b+"<br>");
+var c;
+document.write("c="+c+"<br>");
+
+document.write("사칙연산"+"<br/>");
+a1=100+30;
+a2=100-30;
+a3=100*30;
+a4=100/30;
+a5=100%30;
+a6=2**3;
+document.write("a1=100+30 a2=100-30 a3=100*30 a4=100/30 a5=100%30 a6=2**3 \n");
+document.write("콘솔을 확인하세요");
+console.log(a1)
+console.log(a2)
+console.log(a3)
+console.log(a4)
+console.log(a5)
+console.log(a6)
+document.write("<br/>");
+document.write("단항연산자"+"<br/>");
+document.write("<br/>");
+document.write("콘솔을 확인하세요");
+document.write("<br/>");
+var b=100;
+b=b+5;
+console.log(b)
+b+=5;
+console.log(b)
+b-=5;
+console.log(b)
+b*=5;
+console.log(b)
+b%=5;
+console.log(b)
+document.write("<br/>");
+document.write("증감연산자"+"<br/>");
+document.write("콘솔을 확인하세요");
+document.write("<br/>");
+c=100, x=1;
+y=c+x++;
+console.log("c="+c);
+console.log("x="+x);
+console.log("y="+y);
+y=c+ ++x;
+console.log("c="+c);
+console.log("x="+x);
+console.log("y="+y);
+
+
+</script>
+</body>
+</html>

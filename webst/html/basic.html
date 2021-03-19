@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>이미지넣기</h1>
+<img src="img/1.jpg" alt="도로이미지" width="500" height="200"/>
+
+<hr>
+<h1>List 정리</h1>
+<ol type="i">
+    <li>리스트1</li>
+    <ol type="a">
+        <li>리스트3</li>
+        <li>리스트4</li>
+    </ol>
+        <li>리스트2</li>
+    <ol type="I">
+        <li>리스트5</li>
+        <li>리스트6</li>
+    </ol>
+</ol>
+
+<ul type="square">순서없음/type 문양
+<li>순서X</li>
+<li>순서x</li>
+</ul>
+<hr>
+<!--하이퍼링크태그 a:다른 웹페이지나 웹페이지 내부의 이동시-->
+<!--<a href="절대경로 or 상대경로 or id속성"></a>-->
+<!--    상대 경로 표시
+        .. 상위폴더
+        .  현재폴더
+        <a href="..\img\1.jpg'/>
+-->
+<h1>하이퍼링크</h1>
+
+<a href="http://www.sbs.co.kr">SBS</a></br>
+<a href="#">갈곳 없을때</a> </br>
+<a href="img/1.jpg">이미지로 가기</a>
+
+<h3>누른곳으로 가기 연습</h3>
+<a href="#here">here</a>
+<h2 id="here">here</h2>
+여기로 오세요~~~~~~~~~~~~<br/>
+여기로 오세요~~~~~~~~~~~~<br/>
+<hr>
+
+<h1>표</h1>
+
+<!--
+==== 표
+table : 표
+tr : 표의 행 table row
+td : 표의 요소 table data
+th : 표의 제목요소 table header
+thead : 표의 머리 table head
+tbody : 표의 본문 table body
+tfoot 표의 꼬리 table foot
+
+==== 셀병합
+colspan : 셀의 너비 지정
+rowspan : 셀의 높이 지정
+
+-->
+
+<table border="1" width="300px">
+    <tr>
+        <td width="20%">1</td>
+        <td width="20%">2</td>
+        <td width="20%">3</td>
+        <td width="20%">4</td>
+        <td width="20%">5</td>
+    </tr>
+    <tr>
+        <td width="20%">5</td>
+        <td width="20%">4</td>
+        <td width="20%">3</td>
+        <td width="20%">2</td>
+        <td width="20%">1</td>
+    </tr>
+     <tr>
+        <td rowspan="5">1231231</td>
+    </tr>
+    <tr>
+    <td colspan="3">일부</td>
+    <td colspan="2">합체</td>
+    </tr>
+    <tr>
+        <td>세</td>
+    </tr>
+     <tr>
+        <td>로</td>
+    </tr>
+     <tr>
+        <td>합체</td>
+    </tr>
+
+</table>
+<hr>
+<h1>폼연습</h1>
+<form nama="myform" action="=1015-1.html">
+
+    <laber for="userid">입력하는 연습</laber>
+    <input type="text" name="userid" size="50" maxlength="10" id="userid"><br/>
+    <label for="pw1">암호화</label>
+    <input type="password" name="pw" id="pw1"><br/>
+    이미지넣기<input type="file" name="photo"><br/>
+    성별<input type="radio" name="gender" value="1">남자
+       <input type="radio" name="gender" checked value="2">여자/기본값 checked value<br>
+    취미 <input type="checkbox" name="hobby" value="m">등산
+        <input type="checkbox" name="hobby" value="f">낚시
+        <input type="checkbox" name="hobby" value="etc" checked>기타/checked
+        <input type="checkbox" name="hobby" value="none">없음<br>
+    장문텍스트<textarea name="info" cols="50" rows="5">간략히 작성하세요</textarea><br/>
+    선택하기<select name="food">
+           <option value="ff">선택하세요</option>
+           <option value="f1">김밥</option>
+           <option value="f2" selected>떡볶이</option> <!-- 기본선택 selected 옵션-->
+           <option value="f3">순대</option>
+           <option value="f4">쫄면</option>
+            </select><br/>
+    주민등록번호<input type="text" name="id1" size="7" maxlength="6"> - / - 진짜 그냥 써줌
+              <input type="password" name="id2" size="8" maxlength="7"><br/>
+    보여주기 <select name="trip" multiple size="2"> <!--size 몇개씩 볼거냐-->
+            <option value="t1">선택하세요</option>
+            <option value="t2">통영케이블카</option>
+            </select><br/>
+            <input type="submit" value="등록하기">
+            <input type="reset" value="새로작성"> <!-- reset 초기화버튼 -->
+             <input type="button" value="누르세요">
+            <input type="image" src='img\1.jpg' width="40" >이미지 이동
+</form>
+
+<form name="form2" action="1019-1.html">
+      <fieldset> <!-- 연관이 있는 입력양식을 그룹으로 묶기 -->
+        <legend>비슷한거 묶기</legend>
+    이름: <input type="text" name="name"><br/>
+    전번: <input type="text" name="tel"><br/>
+    주소: <input type="text" name="addr"><br/>
+    </fieldset>
+</form>
+
+<hr>
+
+
+
+</body>
+</html>

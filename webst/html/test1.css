@@ -1,0 +1,23 @@
+* {margin:0;
+  font-size:20px;
+  line-height:150%}
+body {font-size:2rem;}
+.container {max-width:1400px;
+            margin:0 auto;
+            }
+.detail span {color:#E14F94;
+              font-weight:900;}
+table{border:1px solid gray;
+        width:95%;}
+th{background:gray;
+border-bottom:1px solid gray;}
+
+input[type="text"], input[type="password"]
+        { width:90%;
+        height:30px;
+        margin:5px 10px;}
+
+input[type="number"]{width:28%; margin:5px 10px;}
+input[type="email"]{width:47%}
+.job {width:95%;}
+.one {width:95%;}

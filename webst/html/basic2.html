@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .s1{background:red;}
+        .s2{background-color:yellow; font-size:30pt; color:red;text-align:center;}
+        .s3{font-size:2em; font-weight:900;}
+        .s4{font-style:italic;}
+        .d2{border:2px solid red;}
+        .d3{border:3px dotted blue;}
+        .d4{background:orange}
+        .c1{width:100px;
+            height:100px;
+            background:aqua;
+            margin:50px;
+            border:3px solid black;
+            padding:20px;}
+        .c2{width:200px;
+            height:100px;
+            background:blue;
+            margin:20px;  /* 밖 테두리 */
+            border:1px solid black;
+            padding:20px; /* 안쪽 테두리 */
+            box-sizing:border-box} /* box-sizing:border-box 패딩과 보더값을 포함하여 너비와 높이 적용 */
+        .c3{width:300px; height:150px; background:red;}
+        .c4{width:100px; height:100px; background:yellow;}
+
+        /* 인라인(span) 요소는 너비와 높이가 작성된 내용을 제외하고는 적용되지 않음 */
+        /* 이미지태그 역시도 인라인 요소이지만 너비와 높이가 적용 */
+    </style>
+</head>
+<body>
+
+<h1>색칠 공부</h1>
+
+<h2 class="s1">backgrond</h2>
+<h2 class="s2">backgrond</h2>
+<h2 class="s3">backgrond</h2>
+<h2 class="s4">backgrond</h2>
+
+<h1>공간분할</h1>
+<div>div는 블록형식 태그다</div>
+<div>div 여러요소들을 묶어야 할때, 다른 적절한 태그가 없을때</div><br>
+<span>span은 인라인형식 태그다</span><br>
+<span>인라인형식은 작성된 부분만 사용하는 형식</span>
+<hr>
+
+<h1>테두리 치기</h1>
+<div class="d1">
+    <div class="d2">ddd</div>
+    <div class="d3">ddd</div>
+    <div class="d4">ddd</div>
+</div>
+<hr>
+<h1>시멘틱 태그-의미론적 태그</h1>
+
+<header>헤더</header>
+<nav>네비게이션</nav>
+<main>표현하고 싶은내용</main>
+<aside>광고등 표시</aside>
+<footer>맨아래바닥</footer>
+<hr>
+<div class="container">
+    <div class="c1">첫번째 박스</div>
+    <div class="c2">두번째 박스</div>
+    <span class="c3">span태그1</span>
+    <span class="c4">span태그2</span>
+    <a href="#">a태그</a>
+
+</div>
+
+<hr>
+
+
+</body>
+</html>

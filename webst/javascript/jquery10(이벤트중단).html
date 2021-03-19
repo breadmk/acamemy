@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+<div class="one">첫번째 div
+    <p class="two">
+        두 번째 p
+        <a href="js1.html" class="three">세 번째 a</a>
+        <span class="four">네 번째 span</span>
+        <a href="js2.html" class="five">다섯 번째 a</a>
+    </p>
+
+</div>
+<script>
+$('.one').click(function(){
+    alert('첫번째 div 클릭하셨습니다')
+})
+$('.two').click(function(event){
+    event.stopPropagation();    //이벤트가 상위 전파 중지
+    alert('두번째 p 클릭하셨습니다')
+})
+$('.three').click(function(event){
+    event.preventDefault();     //고유동작 중단
+    event.stopPropagation();    //이벤트가 상위 전파 중지
+    alert('세번째 a 클릭하셨습니다')
+})
+$('.four').click(function(event){
+   alert('네번째 span1 클릭하셨습니다')
+   event.stopImmediatePropagation()
+})
+$('.four').click(function(event){
+   alert('네번째 span2 클릭하셨습니다')
+})
+$('.five').click(function(event){
+   alert('다섯번째 a 클릭하셨습니다')
+   return false;
+})
+
+</script>
+<hr>
+<pre>
+이벤트 처리막기
+1) event.preventDefault() : 고유동작 중단
+2) event.stopPropagation() : 이벤트가 상위 전파 중단
+3) event.stopImmediatePropagation() : 상위뿐 아니라 같은 레벨로도 전파 중단
+4) return false : event.stopPropagation() + event.preventDefault()
+    jquery 사용시 : event.stopPropagation() + event.preventDefault() [고유동작+이벤트상위 중단]
+    jquery 미사용시 : event.preventDefault() [고유동작 중단]
+</pre>
+
+</body>
+</html>

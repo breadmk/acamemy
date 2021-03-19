@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <style>
+    * {margin:0; padding:0;}
+    ul {list-style:none;}
+    ul.main > li {float:left; background:red; width:150px; height:24px;}
+    ul.main::after{clear:both;content::''; }
+    .main > li a { text-decoration:none;font-weight:900; text-align:center; width:100%; height:100%;text-align:center;}
+    </style>
+
+</head>
+<style>
+    .s1{background:red}
+</style>
+<body>
+<table border="1" id="td2">
+    <tr>
+        <td>1번</td>
+        <td>2번</td>
+        <td>3번</td>
+    </tr>
+    <tr>
+        <td>4번</td>
+        <td>5번</td>
+        <td>6번</td>
+    </tr>
+    <tr>
+        <td>7번</td>
+        <td>8번</td>
+        <td>9번</td>
+    </tr>
+</table>
+<script>
+    $(function(){
+    $('td').eq(0).css('background','blue')
+    $('td').eq(1).css('background','red')
+    $('td').eq(1).next().css('background','blue')
+    $('td').eq(4).prev().css('background','blue')
+    $('td').eq(4).prev().css('background','blue')
+    })
+</script>
+
+<div>아이디
+    <input type="text" id="text1"><br>
+    비밀번호 <input type="password" id="pw">
+</div>
+
+<script>
+    $('input').focus(function(){
+        $(this).addClass('s1')
+    })
+    $('input').blur(function(){
+        $(this).removeClass('s1')
+    })
+</script>
+
+<div class="one">첫번째 div
+    <p class="two">
+        두 번째 p
+        <a href="js1.html" class="three">세 번째 a</a>
+        <span class="four">네 번째 span</span>
+        <a href="js2.html" class="five">다섯 번째 a</a>
+    </p>
+</div>
+<script>
+    $('.one').click(function(e){
+        alert('one 클릭')
+    })
+    $('.two').click(function(e){
+        alert('two 클릭')
+    })
+    $('.three').click(function(e){
+        alert('three 클릭')
+    })
+    $('.four').click(function(e){
+        alert('four 클릭')
+        event.stopPropagation() // 얽힌 이벤트 무시.
+    })
+    $('.five').click(function(e){
+        alert('five 클릭')
+        event.preventDefault()  //링크타고 안감.
+        event.stopPropagation()
+    })
+
+
+</script>
+
+<pre>
+이벤트 처리막기
+1) event.preventDefault() : 고유동작 중단
+2) event.stopPropagation() : 이벤트가 상위 전파 중단
+3) event.stopImmediatePropagation() : 상위뿐 아니라 같은 레벨로도 전파 중단
+4) return false : event.stopPropagation() + event.preventDefault()
+    jquery 사용시 : event.stopPropagation() + event.preventDefault() [고유동작+이벤트상위 중단]
+    jquery 미사용시 : event.preventDefault() [고유동작 중단]
+</pre>
+
+<ul class="main">
+    <li>
+        <a href="#">oracle</a>
+        <ul class="sub">
+            <li><a href="#">오라클 설치</a></li>
+            <li><a href="#">SQL</a></li>
+            <li><a href="#">PL/SQL</a></li>
+        </ul>
+    </li>
+
+    <li>
+        <a href="#">html5</a>
+         <ul class="sub">
+            <li><a href="#">기본태그</a></li>
+            <li><a href="#">폼태그</a></li>
+            <li><a href="#">시멘틱태그</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">css3</a>
+        <ul class="sub">
+            <li><a href="#">글자,바탕색</a></li>
+            <li><a href="#">레이아웃</a></li>
+            <li><a href="#">선택자</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">javascript</a>
+
+        <ul class="sub">
+            <li><a href="#">기본문법</a></li>
+            <li><a href="#">함수</a></li>
+            <li><a href="#">객체</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">jquery</a>
+        <ul class="sub">
+            <li><a href="#">환경설정</a></li>
+            <li><a href="#">함수</a></li>
+            <li><a href="#">동적생성</a></li>
+        </ul>
+    </li>
+</ul>
+<script>
+    $('.sub').hide();
+    $('.main li').hover(function(){
+            $(this).find('.sub').show(100)},
+            function(){
+            $(this).find('.sub').hide(50)
+    })
+
+</script>
+
+
+</body>
+</html>

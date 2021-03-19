@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>position</title>
+    <style>
+    span,div {border:1px solid red;}
+    .one {position:relative;
+            top:5px; /* static을 기준으로 위쪽으로부터 떨어지는 정도 마이너스도 적용 가능. */
+         }
+    .two {position:relative;
+            right:5px; /* static을 기준으로 오른쪽으로부터 떨어지는 정도 */
+         }
+    .three {position:relative;
+            left:5px; /* static을 기준으로 왼쪽으로부터 떨어지는 정도 */
+            }
+
+    #first {position:absolute;
+            right:0px;
+            width:100px;
+            height:100px;
+            background:purple;
+            }
+
+    #second {background:green;
+            width:300px;
+            height:300px;
+            position:relative;
+
+            }
+    #third {position:absolute;
+            right:100px;
+            width:100px;
+            height:100px;
+            background:blue;}
+    #foruth {  width:300px;
+            height:100px;
+            background:gray;}
+    #fifth{
+            background:pink;
+            position:fixed;
+            top:100px;
+            right:100px;
+            }
+    a {text-decoration:none;
+        color:black;
+        }
+    a:hover{color:yellow;  /* 마우스 올렸을때 */
+            font-weight:900;
+            }
+    a:visited {color:green;}    /* 이미 누른 페이지 일때 */
+    a:active{color:pink}       /* 누르고 있을때 */
+    a:link(color:gery;}         /* 미방문 */
+    a { text-decoration: none; } /* 밑줄없애기 */
+
+    </style>
+</head>
+<body>
+<!--
+position:태그의 위치결정
+static:기본값 ( span은 좌에서 우로 div는 상에서 하로 )
+relative : top,bottom,left,right 속성값
+            static인 상태를 기준으로 위치 적용.
+absolute : top,bottom,left,right 속성값
+            position이 static속성을 가지지 않는 부모를 기준으로 위치 적용.
+fixed    : top,bottom,left,right 속성값
+
+-->
+<!--<span class="one">span1</span>-->
+<!--<span class="two">span2</span>-->
+<!--<span class="three">span3</span>-->
+<!--<div>div</div>-->
+<!--<hr>-->
+<div id="foruth">
+    <div id="first">absolute1</div>
+</div>
+<div id="second">
+    <div id="third">absolute2</div>
+</div>
+<div>
+    <div id="fifth">fixid</div>
+    </div>
+
+<hr>
+<a href="https://www.kbs.co.kr">KBS</a><br/>
+<a href="https://www.sbs.co.kr">SBS</a><br/>
+<a href="https://www.imbc.com">MBC</a><br/>
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

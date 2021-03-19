@@ -1,0 +1,55 @@
+* {margin:0; box-sizing:border-box;}
+
+html{font-size:13px;}
+body{font-size:1.5rem;}
+.container{max-width:1400px;
+           margin:0 auto;
+           background:yellow;}
+
+#header {background:white;
+        height:80px;
+        position:relative;
+        border:1px solid black;}
+.logo {position:absolute;
+        top:10px;
+        left:5px;}
+#nav {background:#d91b5c;}
+#nav::after{
+content:' '
+display:block;
+clear:both;}
+#menu {background:#d91b5c;
+        float:left;
+        width:70%}
+
+li {list-style-type:none;
+    display:inline;
+    color:white;
+    padding:40px;
+    }
+#search {float:left; width:30%;
+        text-align:right;
+        background:#d91b5c;}
+#content{background:black;
+        clear:both;}
+#content::after{
+content:' ';
+display:block;
+clear:both;}
+
+#laside{float:left;
+         width:15%;
+         background:aqua;}
+#main{float:left;
+        width:65%;
+        background:blue;}
+#raside{float:left;
+         width:20%;
+         background:pink;}
+#footer{background:tomato;
+        clear:both;
+        }
+
+
+
+

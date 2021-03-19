@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>위키북스</title>
+    <style>
+         * {margin:0;}
+         #iheader h3 {text-align:right; position:relative; float:left}
+         #iheader > img {float:left; }
+         #container {height:200px; float:letf;}
+         #ise {height:400px; width:70%; float:left;}
+         #ias { height:400px; width:30%; float:left;}
+         #ifo {clear:both; height:200px; }
+         #fd1 {float:left; height:200px; width:35%; }
+         #fd2 {background:pink; float:left; height:200px; width:35%;}
+         #fd3 {background:gray; float:left; height:200px; width:30%;}
+         #ina {background:gray; padding:30px; margin: 85px; }
+         #ina li {
+            list-style-type:none;
+            display:inline;
+            padding: 0px 20px 30px; /* padding 안쪽여백 */
+            /* border: px solid blue; */
+            }
+         #fd1 li {list-style-type:none;}
+         #fs1 {margin:10px; padding:10px;  text-align:center;}
+         #ias > fieldset {}
+    </style>
+</head>
+<body>
+<header id="iheader">
+     <img src="img\logo.png" alt="로고이미지" title="로고" height=100px />
+
+</header>
+<nav id="ina">
+    <ul>
+        <li>About </li>
+        <li>도서 시리즈 </li>
+        <li>전체 도서 목록</li>
+        <li>저자/역자 모집</li>
+        <li>도서 관련 문의</li>
+
+    </ul>
+</nav>
+<div id="container">
+    <section id="ise">
+        <fieldset>
+        <img src="img\dnl1.jpg" height="300">
+        <img src="img\dnl2.jpg" height="300" >
+        <img src="img\dnl3.jpg" height="300" >
+        <img src="img\dnl4.jpg" height="300">
+        </fieldset>
+    </section>
+<aside id="ias">
+       <fieldset id="fs1">
+    <img src="img\dnl5.jpg" height="100"><br/>
+    저자/역자 모집<br>
+
+    <img src="img\dnl6.jpg" height="100"><br/>
+    도서관련문의
+     </fieldset>
+</aside>
+</div>
+<footer id="ifo">
+    <div id="fd1">
+        <ul>
+            <li>위키북스</li>
+            <li>찾아오시는길</li>
+            <li>연락처</li>
+            <li>이메일</li>
+            <li>개인정보처리방침</li>
+        </ul>
+    </div>
+    <div id="fd2">트윗</div>
+    <div id="fd3">이미지</div>
+</footer>
+</body>
+</html>

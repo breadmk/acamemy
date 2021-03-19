@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>style</title>
+    <style>
+
+    /* 선택자 {속성1:값1;[속성2:값2;...]}
+    선택자 : *  - 모든요소
+           태그
+           .클래스명
+           #id
+    */
+    * {font-family:궁서;}
+    body {font-size:10px;}
+    h1 {background-color:yellow; font-size:30pt; color:red;text-align:center;}
+    h3 {color:blue; text-align:right; font-size:20pt;}
+    /* p {font-size:14pt;} */
+    p {font-size:2em; font-weight:900;} /* 굵기 font-weight normal,bold 또는 100-900 */
+    /* 가장 상위에 있는 테그 크기 2배다 2rem, 작게만들고 싶다 0.8rem */
+    /* 부모 크기의 2배다 2em, 작게만들고 싶다 0.8em */
+    p.f1 {color:red;}
+    .f2 {background-color:pink;}
+    #id1 {font-style:italic;}
+    </style>
+</head>
+<body>
+<h1>훈민정음 서문</h1>
+
+<h3 class="f2">세종대왕</h3>
+<p>나랏말싸미 듕귁에 달아</p>
+<p>문자와를 서로 사맛디 아니할쎄</p>
+<p class="f1">이런 전차로 어린백성이</p>
+<p class="f1" id="id1">니르고저 할빼이셔도</p>
+<p >마참내 제 뜻을 능히펴지</p>
+<p class="f2">못할놈이 하니다.</p>
+<p>내이를 어여삐 녀겨</p>
+<p>새로 스물여덟자를 맹가노니</p>
+<p class="f1">사람마다 수비니겨 날로쓰매</p>
+<p>편아케 하고저 할 따라미니라.</p>
+</body>
+</html>

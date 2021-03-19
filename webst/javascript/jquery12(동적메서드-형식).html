@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<style>
+.one {background:blue}
+
+
+</style>
+      <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(function(){
+        $('td:eq(4)').css('background','red')
+        $('td:eq(2)').css('background','green')
+        $('td:eq(4)').next().css('background','yellow')
+        $('td:eq(4)').prev().css('background','blue')
+        $('td:eq(4)').parent().css('color','aqua')
+        $('td:eq(4)').parent().next().css('color','orange')
+        $('td:eq(4)').parent().next().children().css('color','gray')
+        $('td:eq(4)').parent().next().children().eq(0).css('text-decoration','underline')
+        $('td').eq(4).parent().next().children().eq(1).css('text-decoration','underline')//방법2
+        $('td:eq(4)').parent().prev().css('color','red')
+        })
+    </script>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <td>1번</td>
+        <td>2번</td>
+        <td>3번</td>
+    </tr>
+    <tr>
+        <td>4번</td>
+        <td>5번</td>
+        <td>6번</td>
+    </tr>
+    <tr>
+        <td>7번</td>
+        <td>8번</td>
+        <td>9번</td>
+    </tr>
+</table>
+<pre>
+document객체 : html과 xml문서의 뼈대,문서의 구조나 내용에 접근할 수 있는 방법
+Element : 하나의 태그 요소
+Attribute : Element 에 속해 있는 속성
+Node : Element 에서 시작되는 트리구조
+next() : 다음
+prev() : 이전
+parent() : 부모
+parents() : 조상
+children() : 자손
+find() : 찾기
+eq(n) : 몇 번째 태그에 적용. 0부터 시작.
+</pre>
+<hr>
+<form>
+<p>아이디: <input type="text" name="id"></p>
+<p>비밀번호: <input type="password" name="pw"></p>
+</form>
+<script>
+
+/*
+주석
+$('input').focus(function(){
+    $(this).addClass('one')
+})
+$('input').blur(function(){     //포커스가 떠나면
+    $(this).removeClass('one')
+})
+주석
+*/
+
+// 바인드로 다시
+
+$('input').bind({
+            'focus':function(){$(this).addClass('one')},
+            'blur':function(){$(this).removeClass('one')}
+            })
+</script>
+<pre>
+bind() : $('선택자').bind(event,function(){})
+         $('선택자').bind({'event1':function(){},
+                         {'event2':function(){},
+                         {'event3':function(){}
+                         ... })
+one() : 일회성 처리가 필요시, bind와 사용법 동일.
+on() : 동적으로 추가할 요소에 대한 이벤트를 미리 정의해 놓는 기능.
+       이벤트가 정의되는 시점에는 대상이 존재하지 않음.
+       이 이벤트는 document 객체에 설정.
+       $(document).on('event','선택자',function(){})
+
+</pre>
+
+
+</br></br></br></br></br></br></br></br></br></br>
+</br></br></br></br></br></br></br></br></br></br>
+</body>
+</html>

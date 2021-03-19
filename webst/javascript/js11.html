@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+<script>
+function question(){
+    q=prompt("수식을 입력하세요==>")
+    a=eval(q);
+    //document.write(a);  //버튼을 지워버리고 새로 작성해버림
+    document.getElementById("q").innerHTML=q+"="+a; //지정한 자리에 넣기
+}
+
+
+</script>
+</head>
+<body onload="question()">
+
+<h1 id="q"></h1>
+<input type="button" value="누르세요" onclick="question()">
+
+
+</body>
+</html>

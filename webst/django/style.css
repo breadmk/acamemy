@@ -1,0 +1,170 @@
+html {font-size:16px;}
+* {box-sizing:border-box;}
+body {font-size:1.1rem;}
+a {text-decoration:none;}
+
+.header {background:#003800; height:70px;}
+.container,.container-float {
+            max-width:1400px;
+            height:50px;
+          /* background:#003800; */
+          margin:0 auto;  /* 가운데 정렬 */
+          position:relative; /* 아래에 위치한 내용들을 안에 모두 담기위해 기준점이 됨 */
+          padding:10px 0;}
+
+
+
+.logo {position:absolute;
+        top:0; left:0;
+        margin:0;
+        padding:0 0 0 25px;
+        color:white;
+        }
+.nav {text-align:right; font-weight:500;}
+ul {list-style:none;}
+.list-item{display:inline;}
+header a {color:white; padding:7px; font-weight:500;}
+header a:hover {color:#A5DE9F;}
+
+.main {/*background:#FFE400;*/}
+/* hero 영역 */
+.hero { text-align:center;
+        padding:50px 0;
+        border-bottom:1px solid #d4d4d4;
+        height:300px;}
+
+.hero1 {font-size:1.5rem;
+        width:500px;
+        margin:30px auto;
+}
+.hero2{
+    display:block;
+    width:350px;
+    background:#44b78b;
+    margin:0 auto;  /*가운데 정렬*/
+    padding:20px;  /* 버튼처럼 */
+    color:white;
+    font-weight:500;
+   /* border-radius:10px; */ /*버튼 테두리 둥글게 */
+}
+.main-hero2{
+            width:350px;
+            border-radius:10px;}
+
+.hero2:hover{background:#A5DE9F;}
+
+.main-content {
+              float:left; width:70%;
+              }
+.main-title {font-size:2.3rem;
+            }
+.mailing-title {color:red;}
+.mailing {
+        float:left;
+        width:50%;
+        }
+.m1 {color:#44b78b;}
+
+/* 버튼의 위치기준 */
+.frm1 {position:relative;}
+
+.btn1 {border:0;
+       background:transparent;  /* 바탕색 투명 */
+        position:absolute;  /* 기준이 되는 부모의 position 속성도 변경할것 */
+         top:20%;
+         right:30%;
+         cursor:pointer;
+         }
+input {width:73%;
+        height:30%;
+        padding:1% 5% 3% 5%;
+        border: 1px solid #44b78b;}
+
+.mailing-layout::after{
+        content:'';
+        display:block;
+        clear:both;
+        }
+.main-end {clear:both;}
+
+.side-content {
+              float:left; width:30%;}
+
+/* .container-float {max-width:1400px;
+                  background:red;
+                  margin:0 auto;
+                  position:relative;
+                  padding:10px 0;} */
+/* 1) main-content와 side-content 의 부모로서 자리하지 못함. 부모에 가상요소를 주어 해제 */
+.container-float::after{
+                display:block;
+                content:'';
+                clear:both;
+                height:100px;}
+/* container-float가 자식의 높이를 완벽히 가짐을 확인 */
+.container-side-cta{text-align:center;
+                    padding:20px;}
+.more {display:block;
+        margin:20px 0 0 0;
+        font-size:0.8rem;
+        font-weight:600;
+        color:#44b78b;
+        text-align:center;}
+.more::after{
+            content:'>';}
+.side-hero2 {
+            width:400px;
+            text-align:center;
+            border-radius:10px;
+           }
+.infos {margin:30px 0;}
+.infos-title {font-size:1.1rem;
+               border-bottom:1px solid #44b78b;
+               padding:0 0 20px 0;}
+.footer {margin:0 auto;
+        max-width:1400px;
+        margin:0 auto;
+        clear:both; /* 2)main-content와 side-content 의 float 영역으로 부터 독립적으로 나타냄*/
+         }
+
+.container-footer{background:red;
+                    }
+.footer1{height:300px;background:#44b78b;
+text-align:left;
+font-weight:900;color:white; padding:20px;}
+.f{color:white; font-size:0.9rem;}
+footer a:hover {text-decoration:underline;}
+.f1{color:white;}
+.f2{color:#469840;}
+.f-l{float:left; width:25%}
+.f-g{float:left; width:25%}
+.f-f{float:left; width:25%}
+.f-s{float:left; width:25%}
+.f-b{width:100%;
+     background:#003800;
+    height:100%;
+    }
+.f-h1{margin:0 0 0 0;
+       padding:20px;
+       color:white;
+       width:34%}
+.f-b0{float:left; width:33%}
+.f-b1{float:left;
+        padding:20px;
+        width:33%}
+.f-b2{float:left;
+    padding:20px;
+    width:33%}
+.f-b1-h{margin:0px;}
+.f-b2-h{margin:0px;}
+li{padding:5px;}
+ul{padding:0px;}
+.f-bb{color:#469840;}
+.f-b1{color:#469840;}
+
+/*
+1)웹폰트
+2)기본스타일이 브라우져별로 조금씩 다름, 이를 최소화 하기 위한 기법
+css reset
+css normalize  다운로드후 <link rel="stylesheet" href="normalize.css">
+*/

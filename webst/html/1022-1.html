@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {margin:0;}       /* 모든 태그의 밖 여백을 삭제 */
+        .one {background:#FFD9EC; width:200px; height:150px;}
+        .two {background:#00D8FF; width:200px; height:150px;}
+         /* 인라인형식도 display 속성을 이용해서 블록형식으로 변경 가능 */
+        span {display:block;}
+         /* 블록형식도 display 속성을 이용해서 인라인형식으로 변경 가능 */
+        div {display:inline;}
+
+       /* 가상요소 : after 작성내용 뒤에 나타는것 before 작성내용 앞에 나타나는것 */
+        span::after{
+        content:'####';
+        }
+        div::before{
+        content:'$$$$';
+        }
+    </style>
+</head>
+<body>
+<span class="one" >스팬1</span>
+<span class="two">스팬2</span>
+<div class="one">div1</div>
+<div class="two">div2</div>
+
+
+</body>
+</html>

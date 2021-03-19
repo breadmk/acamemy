@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>일반회원 기본정보 입력 - 국내1위</title>
+    <table width="800" border="1">
+        <form name="idform" action="1015-1.html">
+        <tr>
+            <td colspan="2">기본정보입력</td>
+        </tr>
+        <tr>
+            <td bgcolor="#FFD9EC">가입인증</td>
+            <td >
+                <input type="radio" name="p" checked value="1">휴대폰 인증
+                <input type="radio" name="p" value="2">이메일 인증<br/>
+                <fieldset style="border:1 solid red; background:#FFD9EC"> 휴대폰 입력
+                <select name="num">
+
+
+
+
+                    <option value="010" selected>010</option>
+                    <option value="02">02</option>
+                    <option value="031">031</option>
+                    <option value="011">011</option>
+                </select> -
+                <input type="text" name="id1" size="7" maxlength="6"> - <!-- - 은 표기. 민번용-->
+                <input type="text" name="id2" size="8" maxlength="7">
+                <input type="submit" value="인증번호 받기" formaction="1015-3.html"><br/>
+                인증번호입력
+                <input type="text">
+                <input type="submit" value="확인" formaction="1019-1.html"><br/>
+                <font size="2" color="red">가입인증 방법 하나를 선택하여 인증을 받으시기 바랍니다. </font><br/>
+                <font size="2"> 휴대폰으로 발송된 인증번호를 입력한 후 확인을 누르면 인증이 완료됩니다.<br>
+                인증절차에 궁금증 있으시면 02-784-2329로 연락주세요.(평일 오전 9시~오후 6시)</font>
+                </fieldset>
+
+                </td>
+             </tr>
+           <tr>
+               <td bgcolor="#FFD9EC">아이디<td>
+               <input type="userid">
+           </tr>
+            <tr>
+               <td bgcolor="#FFD9EC">비밀번호<td>
+               <input type="password">
+           </tr>
+            <tr>
+               <td bgcolor="#FFD9EC">비밀번호 확인<td>
+               <input type="password">
+           </tr>
+            <tr>
+               <td bgcolor="#FFD9EC">닉네임<td>
+               <input type="userid">
+           </tr>
+        <tr>
+               <td bgcolor="#FFD9EC">이메일<td>
+               <input type="text" size="10"> @
+               <input type="text">
+                    <select name="email">
+                    <option value="ff" selected>직접입력</option>
+                    <option value="n">naver.com</option>
+                    <option value="h">hanmail.co.kr</option>
+                    <option value=g">gmail.com</option>
+                </select>
+                <input type="checkbox" checked> 이메일 수신동의<br/>
+            <font size="2">
+                <font size="2"> * 이메일은 아이디, 비밀번호 분실 시 본인 확인용으로 사용함으로 정확한 정보를 입력하세요.<br/></font>
+                <font size="2" color="red"> * 이메일 주소를 반드시 기억하여 주시기 바랍니다.</font>
+            </font>
+          </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="submit" value="가입완료" >
+                <input type="reset" value="취소" >
+            </td>
+        </tr>
+
+
+</form>
+
+    </table>
+</head>
+<body>
+
+</body>
+</html>

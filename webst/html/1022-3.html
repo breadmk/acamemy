@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {margin:0;}
+        a {text-decoration: none;
+            color:black;}
+
+        /* header 영역 */
+        #iheader {position:relative; margin:0px;} /* position 독립된 공간 확보 */
+        #iheader::after {
+        content:' ';
+        clear:both;
+        }
+        #iheader h3 {text-align:right;}
+        /* margin 에 숫자가 4개 오면 시계방향 margin: 50px 20px 5px 30px;
+        / 2개 쓰면 상하,좌우 margin: 50px 20px ; 1개 쓰면 상하;
+        margin-right(방향):px; 특정 부분만 */ /* margin 외부여백 */
+
+        /* #iheader img 아래의 모든 이미지태그, 자손태그*/
+        /* #iheader >img 아래의 이미지태그, 자식img태그 */
+
+        #iheader > img {float:left; margin: 0 20px 0 10px;}
+
+        /* nav 영역 */
+        #inav {background:green; clear:both; height:40px; margin:0px;}
+        #inav li {
+            list-style-type:none;
+            display:inline;
+            padding:10px 30px; /* padding 안쪽여백 */
+            /* border: 3px solid blue; */
+            }
+
+        #inav a {color:white; font-weight:900;}
+
+
+
+        /* 본문 영역 */
+        #container {height:200px;}
+        #subcontainer { width:60%; float:left;}
+        #iaside {width:40%; float:left;}
+        #container::after{
+        content:'test';
+        clear:both;
+        }
+        /* 꼬리말 영역 */
+        #ifooter { clear:both;}
+    </style>
+</head>
+<body>
+<header id="iheader">
+    <img src="img\11.gif" alt="로고이미지" title="로고"/>
+    <h1>12번가에 오신 것을 환영합니다.</h1>
+    <br/>
+    <h3><a href="#">오늘의 이벤트</a></h3>
+</header>
+
+<nav id="inav">
+    <ul>
+        <li><a href="1015-1.html" target="_blank">베스트</a></li> <!-- targer 열리는 선택 -->
+        <li><a href="1015-2.html" target="_self">쿠폰/혜택</a></li> <!-- _blank 새창/새탭; _self 현재창-->
+        <li><a href="1015-3.html" target="_parent">기획전</a></li>
+        <li><a href="1019-1.html" target="_top">오늘장보기</a></li>
+        <li><a href="1019-2.html" target="i1">T공식대리점</a></li>
+        <li><a href="1019-3.html" target="i1">쇼킹딜</a></li>
+        <li><a href="1019-4.html" target="i1">ALLPRIME</a></li>
+    </ul>
+
+</nav>
+
+<div id="container">
+    <div id="subcontainer">
+        <section>본문영역/section
+            <!-- iframe : inline frame 웹페이지안에 새로운 웹페이지 삽입시 -->
+             <iframe src="1015-2.html" name="i1" width="600px">
+             </iframe>
+
+        </section>
+        <article>독립된 영역/article
+        최근 요양병원 및 시설, 재활병원 등을 고리로 한 신종 코로나바이러스
+        감염증(코로나19) 확진자가 잇따르면서 22일 일일 신규 확진자 수는 100명대로 올라섰다.</article>
+    </div>
+    <aside id="iaside">본문외/aside
+    <h2>추 천 제 품</h2>
+        <img src="img\a.jpg" >
+        <img src="img\b.jpg" >
+        <img src="img\c.jpg" >
+
+    </aside>
+</div>
+<footer id="ifooter">
+12번가(주)
+대표이사 : 이상호, 주소: 서울특별시 중구, Tel: 1599-0123
+사업자등록번호 : 815-81-00000, 통신판매업신고 : 2018-서울북구-1421사업자정보확인
+</footer>
+</body>
+</html>

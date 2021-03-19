@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    #one{width:200px;
+         height:200px;
+         background:red;
+        }
+    #two{width:200px;
+         height:200px;
+         background:aqua;
+        }
+
+    </style>
+
+    <script>
+        /*
+
+        1)window객체: 자바스크립트의 최상위객체
+        내장객체 접근시 window.내장객체명.함수이름()
+        모든 객체가 윈도우 안에 내장되어 있으므로 생략가능    내장객체명.함수이름()
+        window.document.getElementById("id값")
+
+        2)document 객체 : html의 내용제어,css제어,
+        3)form 객체  : 회원가입 게시판 했음.
+        4)image 객체 : js19
+        5)location
+
+        */
+
+        function f1(){
+        document.getElementById("one").style.backgroundColor="pink";
+        }
+        function f3(){
+        document.getElementById("two").style.backgroundColor="pink";
+        }
+        function f2(){
+        document.getElementById("one").style.backgroundColor="red";
+        }
+
+    </script>
+</head>
+<body>
+
+<h1>document 객체</h1>
+<div id="one" class="first" onmouseover="f1()" onmouseout="f2()">테스트1번</div>
+<hr>
+<div id="two" class="first" onclick="f3()">테스트2번</div>
+
+</body>
+</html>

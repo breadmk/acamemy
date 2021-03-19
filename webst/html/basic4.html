@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    #a1 {width:200px; height:150px; background:#B5B2FF;}
+    /* container 그룹화 */
+    #container {height:200px; background:pink;}
+    /* float 기능을 사용하면 다음섹터에도 영향을 주기 때문에 clear: 기능으로 헤제를 해줘야한다 */
+    #a2 {width:33%; height:150px; background:#00D8FF; float:left;
+    line-height:150px; text-align:center;
+    }
+    #a3 {width:33%; height:200px; background:#FAED7D; float:left;}
+    #a4 {width:33%; height:150px; background:#4374D9; float:left;}
+    #container::after{
+    content: '가상요소';
+    clear:both;
+    }
+    #a5 {width:200px; height:150px; background:#47C83E; clear:both;}
+
+
+    </style>
+     <link rel="stylesheet" href="basic4.css">
+
+</head>
+<body>
+<div id="a1">div1</div>
+<div id="container">
+    <div id="a2">div2</div>
+    <div id="a3">div3</div>
+    <div id="a4">div4</div>
+</div>
+<div id="a5">div5</div>
+
+<hr>
+
+<header id="iheader">
+    <img src=".\html\img\a.jpg" alt="로고이미지" title="로고"/>
+    <h1>연습중</h1>
+    <h3><a href="#">오늘의 이벤트</a></h3>
+</header>
+
+<nav id="inav">
+    <ul>
+        <li><a href="django.html" target="_blank">새탭열기</a></li> <!-- targer 열리는 선택 -->
+        <li><a href="django.html" target="_self">현재창열기</a></li> <!-- _blank 새창/새탭; _self 현재창-->
+        <li><a href="django.html" target="_parent">부모프레임에서 새창</a></li>
+        <li><a href="django.html" target="_top">최상위 프레임에서 열기</a></li>
+        <li><a href="django.html" target="i1">無</a></li>
+        <li><a href="django.html" target="i1">無</a></li>
+        <li><a href="django.html" target="i1">無</a></li>
+    </ul>
+
+</nav>
+
+<div id="container1">
+    <div id="subcontainer">
+        <section>본문영역/section
+            <!-- iframe : inline frame 웹페이지안에 새로운 웹페이지 삽입시 -->
+             <iframe src="django.html" name="ee" width="700px">
+             </iframe>
+
+        </section>
+        <article>독립된 영역/article
+        최근 요양병원 및 시설, 재활병원 등을 고리로 한 신종 코로나바이러스
+        감염증(코로나19) 확진자가 잇따르면서 22일 일일 신규 확진자 수는 100명대로 올라섰다.</article>
+    </div>
+    <aside id="iaside">본문외/aside
+
+    <h2>추 천 제 품</h2>
+        <img src=".\html\img\a.jpg" >
+        <img src=".\html\img\a.jpg">
+        <img src=".\html\img\a.jpg" >
+
+    </aside>
+
+<footer id="ifooter">
+12번가(주)
+대표이사 : 이상호, 주소: 서울특별시 중구, Tel: 1599-0123
+사업자등록번호 : 815-81-00000, 통신판매업신고 : 2018-서울북구-1421사업자정보확인
+</footer>
+</div>
+
+</body>
+</html>

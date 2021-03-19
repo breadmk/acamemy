@@ -1,0 +1,44 @@
+   * {margin:0;}
+        a {text-decoration: none;
+            color:black;}
+
+        /* header 영역 */
+        #iheader {position:relative; margin:0px;} /* position 독립된 공간 확보 */
+        #iheader::after {
+        content:'가상요소';
+        clear:both;
+        }
+        #iheader h3 {text-align:right;}
+        /* margin 에 숫자가 4개 오면 시계방향 margin: 50px 20px 5px 30px;
+        / 2개 쓰면 상하,좌우 margin: 50px 20px ; 1개 쓰면 상하;
+        margin-right(방향):px; 특정 부분만 */ /* margin 외부여백 */
+
+        /* #iheader img 아래의 모든 이미지태그, 자손태그*/
+        /* #iheader >img 아래의 이미지태그, 자식img태그 */
+
+        #iheader > img {float:left; margin: 10 0 0 0 10px;}
+
+        /* nav 영역 */
+        #inav {background:green; clear:both; height:40px; margin:0px;}
+        #inav li {
+            list-style-type:none;
+            display:inline; /* 가로 정렬 하는 키워드 */
+            padding:10px 30px; /* padding 안쪽여백 */
+            /* border: 3px solid blue; */
+
+            }
+
+        #inav a {color:white; font-weight:900;} /* 새탭열기 */
+
+
+
+        /* 본문 영역 */
+        #container1 {height:200px;}
+        #subcontainer { width:60%; float:left;}
+        #iaside {width:40%; float:left;}
+        #container::after{
+        content:'test';
+        clear:both;
+        }
+        /* 꼬리말 영역 */
+        #ifooter {clear:both;}
