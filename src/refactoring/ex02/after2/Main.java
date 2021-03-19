@@ -1,0 +1,14 @@
+package refactoring.ex02.after2;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		PuppyRobot puppy = new PuppyRobot("Max");
+		puppy.order(PuppyRobot.Order.EATS);	//먹이를 먹는다
+		puppy.order(PuppyRobot.Order.STOP);	//동작을 멈춘다
+		puppy.order(PuppyRobot.Order.JUMP);	//점핑
+		
+	}
+
+}
